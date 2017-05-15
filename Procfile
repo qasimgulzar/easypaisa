@@ -1,1 +1,1 @@
-web: gunicorn easypaisa.wsgi -b 0.0.0.0:$PORT collectstatic
+web: gunicorn easypaisa.wsgi -b 0.0.0.0:$PORT
