@@ -93,4 +93,4 @@ ENV/
 /.idea/
 /easypaisa-package.iml
 /db.sqlite3
-staticfiles/
+#staticfiles/
