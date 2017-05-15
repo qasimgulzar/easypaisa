@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'easypaisa.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbk21ra6t6ij62',
+        'USER': 'gsmxmhwcppemju',
+        'PASSWORD': '43360d2fbf83db77f8792e276061940bca1459a33bac01c9236e77bde2f7807e',
+        'HOST': 'ec2-23-23-227-188.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
