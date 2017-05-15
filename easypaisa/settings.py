@@ -131,9 +131,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 PROJECT_ROOT = os.path.abspath('../')
-STATIC_ROOT =  os.path.join(PROJECT_ROOT,'static')
+STATIC_ROOT = 'staticfiles'
+
 STATICFILES_DIRS = (
-    STATIC_ROOT,
+    os.path.join(BASE_DIR, 'static'),
 )
 
 REST_FRAMEWORK = {
