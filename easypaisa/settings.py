@@ -26,10 +26,7 @@ SECRET_KEY = 'g%5fo$-7s#w4lu08)_f0$)k*-^(y!ss2!5y3)5w0h#cfn^8wjf'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0',
-    '127.0.0.1',
-    'localhost',
-    'easypaisa.herokuapp.com'
+    '*'
 ]
 
 
@@ -130,11 +127,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PROJECT_ROOT = os.path.abspath('../')
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    STATIC_ROOT,
 )
 
 REST_FRAMEWORK = {
