@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+import patterns as patterns
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
 
 # Routers provide an easy way of automatically determining the URL conf.
+from easypaisa import settings
 from main.views import UserViewSet
 
 router = routers.DefaultRouter()
@@ -28,3 +30,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
+
+urlpatterns += patterns('',
+                        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+                        )
