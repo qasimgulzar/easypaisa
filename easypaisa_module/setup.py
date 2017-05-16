@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='easypaisa-module',
+    name='easypaisa_module',
     version='0.0.1',
     packages=['migrations'],
     url='',
