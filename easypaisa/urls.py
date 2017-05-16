@@ -19,7 +19,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework import routers
 
 # Routers provide an easy way of automatically determining the URL conf.
-from main.views import UserViewSet, PostbackHandler
+from main.views import UserViewSet, PostbackHandler, PaymentView
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^postbackhandler/$',csrf_exempt(PostbackHandler.as_view()))
+    url(r'^postbackhandler/$',csrf_exempt(PostbackHandler.as_view())),
+    url(r'^payment/$',PaymentView.as_view())
 ]
