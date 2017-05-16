@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 # Create your views here.
+import logging
+
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.views.generic import ListView
@@ -25,9 +27,9 @@ class UserViewSet(viewsets.ModelViewSet):
 class PostbackHandler(ListView):
     response = HttpResponse('')
     def get(self,request):
-        print(request.GET,'-----')
+        logging.debug(request.GET)
         return self.response
 
     def post(self,request):
-        print(request.POST,'-----')
+        logging.debug(request.POST)
         return self.response
