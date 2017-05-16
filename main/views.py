@@ -46,5 +46,5 @@ class PostbackHandler(ListView):
 
 class PaymentView(View):
     def get(self, request):
-        context = {'store_id': STORE_ID, 'EASYPAISA_SERVER_URL': EASYPAISA_SERVER_URL}
+        context = {'store_id': STORE_ID, 'EASYPAISA_SERVER_URL': EASYPAISA_SERVER_URL,'postBackURL':EASYPAISA_POST_BACK_URL}
         return render(request, PAYMEN_TEMPLATE, context)
