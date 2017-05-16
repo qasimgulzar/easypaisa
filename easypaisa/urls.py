@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import routers
 
 # Routers provide an easy way of automatically determining the URL conf.
@@ -27,5 +28,5 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^postbackhandler/$',PostbackHandler.as_view())
+    url(r'^postbackhandler/$',csrf_exempt(PostbackHandler.as_view()))
 ]
