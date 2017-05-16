@@ -25,7 +25,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 class PostbackHandler(ListView):
-    response = HttpResponse('')
+    response = HttpResponse('TEST DATA')
     def get(self,request):
         logging.debug(request.GET)
         return self.response
