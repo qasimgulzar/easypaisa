@@ -1,7 +1,6 @@
-django
-djangorestframework
-markdown
-django-filter
+django==1.11.1
+djangorestframework==3.6.3
+markdown==2.6.8
+django-filter==1.0.2
 gunicorn==0.14.6
-psycopg2
-patterns
+psycopg2==2.7.1
