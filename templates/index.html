@@ -6,7 +6,7 @@
 </head>
 <body>
     <h3>Payment Module</h3>
-    <form action=" https://easypaystg.easypaisa.com.pk/easypay/Index.jsf " method="POST" target="_blank">
+    <form action="{{ EASYPAISA_SERVER_URL }}/easypay/Index.jsf " method="POST" target="_blank">
         <! -- Store Id Provided by Easypay-->
         <input name="storeId" value="2785" hidden = "true"/>
         <! -- Amount of Transaction from merchant’s website -->

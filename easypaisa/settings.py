@@ -169,3 +169,10 @@ TEMPLATES = [
         },
     },
 ]
+
+
+STORE_ID=os.environ.get("STORE_ID",2785)
+PAYMEN_TEMPLATE='index.html'
+PAY_TEMPLATE='pay.html'
+EASYPAISA_POST_BACK_URL=os.environ.get('EASYPAISA_POST_BACK_URL','https://easypaisa.herokuapp.com/postbackhandler/')
+EASYPAISA_SERVER_URL=os.environ.get('EASYPAISA_SERVER_URL','https://easypaystg.easypaisa.com.pk')
