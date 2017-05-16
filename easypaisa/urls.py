@@ -19,10 +19,11 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework import routers
 
 # Routers provide an easy way of automatically determining the URL conf.
-from main.views import UserViewSet, PostbackHandler, PaymentView
+from main.views import UserViewSet, PostbackHandler, PaymentView, PaymentStatusViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'paymentStatus', PaymentStatusViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

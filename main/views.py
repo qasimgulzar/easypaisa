@@ -25,6 +25,14 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+class PaymentStatusSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=PaymentStatusModel
+        exclude=()
+
+class PaymentStatusViewSet(viewsets.ModelViewSet):
+    queryset=PaymentStatusModel.objects.all()
+    serializer_class = PaymentStatusSerializer
 
 class PostbackHandler(ListView):
     def get(self, request):
