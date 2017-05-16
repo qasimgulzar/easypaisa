@@ -91,6 +91,6 @@ ENV/
 .ropeproject
 
 /.idea/
-/easypaisa-package.iml
+/*.iml
 /db.sqlite3
 staticfiles/
