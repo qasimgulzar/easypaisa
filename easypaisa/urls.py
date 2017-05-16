@@ -18,7 +18,7 @@ from django.conf.urls import url, include
 from rest_framework import routers
 
 # Routers provide an easy way of automatically determining the URL conf.
-from main.views import UserViewSet
+from main.views import UserViewSet, PostbackHandler
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -26,5 +26,6 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^postbackhandler/$',PostbackHandler.as_view())
 ]
