@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'easypaisa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbk21ra6t6ij62',
-        'USER': 'gsmxmhwcppemju',
-        'PASSWORD': '43360d2fbf83db77f8792e276061940bca1459a33bac01c9236e77bde2f7807e',
-        'HOST': 'ec2-23-23-227-188.compute-1.amazonaws.com',
-        'PORT': 5432,
+        'NAME': os.environ.get('DB_NAME','dbk21ra6t6ij62'),
+        'USER': os.environ.get('DB_USERNAME','gsmxmhwcppemju'),
+        'PASSWORD': os.environ.get('DB_PASSWORD','43360d2fbf83db77f8792e276061940bca1459a33bac01c9236e77bde2f7807e'),
+        'HOST': os.environ.get('DB_HOST','ec2-23-23-227-188.compute-1.amazonaws.com'),
+        'PORT': os.environ.get('DB_PORT',5432),
     }
 }
 
