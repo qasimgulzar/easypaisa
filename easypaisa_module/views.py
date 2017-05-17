@@ -10,7 +10,7 @@ from django.views.generic.base import View
 from rest_framework import serializers, viewsets
 from django.conf import settings
 # Serializers define the API representation.
-from models import PaymentStatusModel
+from easypaisa_module.models import PaymentStatusModel
 
 
 class PaymentStatusSerializer(serializers.ModelSerializer):
